@@ -24,25 +24,18 @@ public class Main {
         a) stworzyć 2 objekty typu Student i uzupełnić wszystkie pola
         b) stworzyć 2 objekty typu Pracownik i uzupełnić wszystkie pola
         c) wypisać metody toString() wszystkich objektów
-
-        zad.4 - Dla chętnych
-        a) stworzyć klasę Kierownik która będzie implementować interfejs PracownikI,
-        b) zaimplementować wszystkie metody, i stworzyć pola
-        c) stworzyć 2 objekty typu Kierownik i uzupełnić wszystkie pola,
-        d) stworzyć listę typu PracownikI --> List<PracownikI> listaPracownikow = new ArrayList<>();
-        e) dodać do niej objekty typu Kierownik i Pracownik
-        f) wypisać pętlą metody toString() wszystkich elementów listy
-        */
-
-        /* zad5 - Dla chętnych
-        Stworzyć klasę która będzie implementować 2 lub 3 interfejsy następnie będzie
-        dziedziczona przez inną klasę
         */
 
 
         Student student1 = new Student("John", "Erasmus", "Wyzsza Szkola Robienia Halasu", 1, "Nic nierobienie");
         Student student2 = new Student("Jan", "Patriota", "Najlepsza Politechnika", 2, "Polityka");
-
+        Pracownik pracownik1 = new Pracownik("Al", "Bundy", 36, "Firmopol", "Operator koparki recznej");
+        Pracownik pracownik2 = new Pracownik("Aleksander", "Kwiatkowski", 42, "Blysk","Konserwator powierzchni plaskich");
+        student1.toString();
+        student2.toString();
+        pracownik1.toString();
+        pracownik2.toString();
+        System.out.println(student1 + "\n" + student2 + "\n" + pracownik1 + "\n" + pracownik2);
 
 
     }
