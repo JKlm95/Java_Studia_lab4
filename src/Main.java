@@ -38,5 +38,12 @@ public class Main {
         Stworzyć klasę która będzie implementować 2 lub 3 interfejsy następnie będzie
         dziedziczona przez inną klasę
         */
+
+
+        Student student1 = new Student("John", "Erasmus", "Wyzsza Szkola Robienia Halasu", 1, "Nic nierobienie");
+        Student student2 = new Student("Jan", "Patriota", "Najlepsza Politechnika", 2, "Polityka");
+
+
+
     }
 }
