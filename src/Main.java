@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Main {
 
@@ -21,6 +22,24 @@ public class Main {
            white(!isIndexCorrect) {}
         */
 
+        String [] tab = {"a", "b", "c", "d", "e", "f"};
+        Scanner scan = new Scanner(System.in);
+
+        try
+        {
+            String s = tab[Integer.parseInt(scan.next())];
+            System.out.println(s);
+        }
+        catch (ArrayIndexOutOfBoundsException e)
+        {
+            System.out.println("Brak elementu w tablicy");
+            throw e;
+        }
+        catch (NumberFormatException e)
+        {
+            System.out.println("Podana wartość nie jest liczbą");
+            throw e;
+        }
 
 
         /* zad.2
@@ -28,6 +47,12 @@ public class Main {
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
+
+
+
+
+
+
 
     }
 }
