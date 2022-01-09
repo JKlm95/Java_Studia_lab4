@@ -23,23 +23,38 @@ public class Main {
         */
 
         String [] tab = {"a", "b", "c", "d", "e", "f"};
+
+        System.out.println("Podaj index tablicy od 0 do 5");
+
         Scanner scan = new Scanner(System.in);
 
-        try
-        {
-            String s = tab[Integer.parseInt(scan.next())];
-            System.out.println(s);
-        }
-        catch (ArrayIndexOutOfBoundsException e)
-        {
-            System.out.println("Brak elementu w tablicy");
-            throw e;
-        }
-        catch (NumberFormatException e)
-        {
-            System.out.println("Podana wartość nie jest liczbą");
-            throw e;
-        }
+        boolean isIndexCorrect = false;
+
+       while(!isIndexCorrect)
+       {
+           try
+           {
+               String s = tab[Integer.parseInt(scan.next())];
+               System.out.println(s);
+               isIndexCorrect = true;
+           }
+           catch (ArrayIndexOutOfBoundsException e)
+           {
+               System.out.println("Brak elementu w tablicy");
+//               throw e;
+           }
+           catch (NumberFormatException e)
+           {
+               System.out.println("Podana wartość nie jest liczbą");
+//               throw e;
+           }
+           finally
+           {
+
+               System.out.println("Koniec programu");
+           }
+       }
+
 
 
         /* zad.2
