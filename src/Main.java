@@ -2,7 +2,8 @@ import java.util.Scanner;
 
 public class Main {
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
 
         /* zad.1
         a) stworzyć tablicę 6-cio elementową, uzupełnić przykładowymi wartościami (dowolny typ tablicy),
@@ -22,7 +23,7 @@ public class Main {
            white(!isIndexCorrect) {}
         */
 
-        String [] tab = {"a", "b", "c", "d", "e", "f"};
+        String[] tab = {"a", "b", "c", "d", "e", "f"};
 
         System.out.println("Podaj index tablicy od 0 do 5");
 
@@ -30,44 +31,47 @@ public class Main {
 
         boolean isIndexCorrect = false;
 
-       while(!isIndexCorrect)
-       {
-           try
-           {
-               String s = tab[Integer.parseInt(scan.next())];
-               System.out.println(s);
-               isIndexCorrect = true;
-           }
-           catch (ArrayIndexOutOfBoundsException e)
-           {
-               System.out.println("Brak elementu w tablicy");
-//               throw e;
-           }
-           catch (NumberFormatException e)
-           {
-               System.out.println("Podana wartość nie jest liczbą");
-//               throw e;
-           }
-           finally
-           {
+        while (!isIndexCorrect)
+        {
+            try
+            {
+                String s = tab[Integer.parseInt(scan.next())];
+                System.out.println(s);
+                isIndexCorrect = true;
+            } catch (ArrayIndexOutOfBoundsException e)
+            {
+                System.out.println("Brak elementu w tablicy");
+                isIndexCorrect = false;
 
-               System.out.println("Koniec programu");
-           }
-       }
+            } catch (NumberFormatException e)
+            {
+                System.out.println("Podana wartość nie jest liczbą");
+                isIndexCorrect = false;
+
+            } finally
+            {
+                if(!isIndexCorrect)
+                {
+                    System.out.println("Spróbuj ponownie...");
+                }else
+                {
+                break;
+                }
+
+            }
+
+        }
+        System.out.println("Koniec programu");
 
 
 
-        /* zad.2
+
+
+
+                /* zad.2
         a) stworzyć dowolny przykład z NullPonterException,
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
-
-
-
-
-
-
-
     }
 }
