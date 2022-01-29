@@ -53,9 +53,6 @@ public class Main {
                 if(!isIndexCorrect)
                 {
                     System.out.println("Spróbuj ponownie...");
-                }else
-                {
-                break;
                 }
 
             }
@@ -73,5 +70,10 @@ public class Main {
         b) stworzyć dowolny przykład z ArithmeticException ,
         c) stworzyć dowolny przykład z 2 lub 3 blokami catch i z blokiem finally,
          */
+
+
+
+
+
     }
 }
